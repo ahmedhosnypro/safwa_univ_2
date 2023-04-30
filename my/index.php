@@ -37,6 +37,10 @@
 require_once(__DIR__ . '/../config.php');
 require_once($CFG->dirroot . '/my/lib.php');
 
+
+// redirect to home
+redirect(new moodle_url('/'));
+
 redirect_if_major_upgrade_required();
 
 // TODO Add sesskey check to edit
