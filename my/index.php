@@ -80,7 +80,10 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
 } else {        // We are trying to view or edit our own My Moodle page
     $userid = $USER->id;  // Owner of the page
     $context = context_user::instance($USER->id);
-    $PAGE->set_blocks_editing_capability('moodle/my:manageblocks');
+//    $PAGE->set_blocks_editing_capability('moodle/my:manageblocks');
+    if (is_siteadmin()) {
+        $PAGE->set_blocks_editing_capability('moodle/my:manageblocks');
+    }
     $pagetitle = $strmymoodle;
 }
 
