@@ -39,7 +39,7 @@ require_once($CFG->dirroot . '/my/lib.php');
 
 
 // redirect to home
-$redirect = $CFG->wwwroot.'/';
+redirect( $CFG->wwwroot.'/');
 
 redirect_if_major_upgrade_required();
 
