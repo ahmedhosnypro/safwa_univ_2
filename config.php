@@ -7,7 +7,7 @@ $CFG = new stdClass();
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = '34.79.157.70';
-$CFG->dbname    = 'moodle';
+$CFG->dbname    = 'examdata';
 $CFG->dbuser    = 'root';
 $CFG->dbpass    = 'GE)2la{_J]d@2b"R';
 $CFG->prefix    = 'mdl_';
@@ -19,7 +19,7 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'https://www.improveing.com';
-$CFG->dataroot  = '/bitnami/moodledata';
+$CFG->dataroot  = '/bitnami/examdata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
