@@ -599,6 +599,7 @@ define('CONTACT_SUPPORT_ANYONE', 2);
  */
 function required_param($parname, $type) {
     if (func_num_args() != 2 or empty($parname) or empty($type)) {
+        return;
         throw new coding_exception('required_param() requires $parname and $type to be specified (parameter: '.$parname.')');
     }
     // POST has precedence.
