@@ -608,6 +608,7 @@ function required_param($parname, $type) {
     } else if (isset($_GET[$parname])) {
         $param = $_GET[$parname];
     } else {
+        return;
         throw new \moodle_exception('missingparam', '', '', $parname);
     }
 
