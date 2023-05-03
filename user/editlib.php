@@ -317,6 +317,7 @@ function useredit_shared_definition(&$mform, $editoroptions, $filemanageroptions
     $choices = get_string_manager()->get_list_of_countries();
     $choices = array('' => get_string('selectacountry') . '...') + $choices;
     $mform->addElement('select', 'country', get_string('selectacountry'), $choices, $purpose);
+    $mform->addRule('country', 'الدولة', 'required', null, 'client');
     if (!empty($CFG->country)) {
         $mform->setDefault('country', core_user::get_property_default('country'));
     }
