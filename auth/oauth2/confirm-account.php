@@ -25,7 +25,7 @@
 require('../../config.php');
 require_once($CFG->libdir . '/authlib.php');
 
-$usersecret = required_param('token', PARAM_RAW);
+//$usersecret = required_param('token', PARAM_RAW);
 $username = required_param('username', PARAM_USERNAME);
 $redirect = optional_param('redirect', '', PARAM_LOCALURL);    // Where to redirect the browser once the user has been confirmed.
 
