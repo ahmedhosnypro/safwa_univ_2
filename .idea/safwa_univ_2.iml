@@ -64,7 +64,6 @@
       <sourceFolder url="file://$MODULE_DIR$/lib/phpunit/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/lib/psr/http-client/src" isTestSource="false" packagePrefix="Psr\Http\Client\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/psr/http-factory/src" isTestSource="false" packagePrefix="Psr\Http\Message\" />
-      <sourceFolder url="file://$MODULE_DIR$/lib/psr/http-message/src" isTestSource="false" packagePrefix="Psr\Http\Message\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/ralouphie/getallheaders/tests" isTestSource="true" packagePrefix="getallheaders\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/ralouphie/getallheaders/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/lib/table/tests" isTestSource="true" />
