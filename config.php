@@ -6,20 +6,20 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = '34.79.157.70';
-$CFG->dbname    = 'examdata';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'moodle';
 $CFG->dbuser    = 'root';
-$CFG->dbpass    = 'GE)2la{_J]d@2b"R';
+$CFG->dbpass    = '';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => 3306,
+  'dbport' => '',
   'dbsocket' => '',
   'dbcollation' => 'utf8mb4_unicode_ci',
 );
 
-$CFG->wwwroot   = 'https://www.improveing.com';
-$CFG->dataroot  = '/bitnami/examdata';
+$CFG->wwwroot   = 'http://localhost/safwa_univ';
+$CFG->dataroot  = 'C:\\wamp64\\moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;

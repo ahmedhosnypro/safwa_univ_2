@@ -801,10 +801,10 @@ function profile_signup_fields(MoodleQuickForm $mform): void {
     if ($fields = profile_get_signup_fields()) {
         foreach ($fields as $field) {
             // Check if we change the categories.
-            if (!isset($currentcat) || $currentcat != $field->categoryid) {
-                 $currentcat = $field->categoryid;
-                 $mform->addElement('header', 'category_'.$field->categoryid, format_string($field->categoryname));
-            };
+//            if (!isset($currentcat) || $currentcat != $field->categoryid) {
+//                 $currentcat = $field->categoryid;
+//                 $mform->addElement('header', 'category_'.$field->categoryid, format_string($field->categoryname));
+//            };
             $field->object->edit_field($mform);
         }
     }

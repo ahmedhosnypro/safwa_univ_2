@@ -90,6 +90,7 @@
       <sourceFolder url="file://$MODULE_DIR$/rss/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/search/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/psr/http-message/src" isTestSource="false" packagePrefix="Psr\Http\Message\" />
       <sourceFolder url="file://$MODULE_DIR$/tag/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/user/tests" isTestSource="true" />
