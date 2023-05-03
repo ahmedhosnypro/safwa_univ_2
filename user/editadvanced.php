@@ -297,7 +297,7 @@ if ($userform->is_cancelled()) {
             $USER->$variable = $value;
         }
         // Preload custom fields.
-        profile_load_custom_fields($USER);
+//        profile_load_custom_fields($USER);
 
         if (!empty($USER->newadminuser)) {
             unset($USER->newadminuser);

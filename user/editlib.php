@@ -307,7 +307,7 @@ function useredit_shared_definition(&$mform, $editoroptions, $filemanageroptions
         $mform->addHelpButton('moodlenetprofile', 'moodlenetprofile', 'user');
     }
 
-    $mform->addElement('text', 'city', get_string('city'), 'maxlength="120" size="21"');
+    $mform->addElement('hidden', 'city', get_string('city'), 'maxlength="120" size="21"');
     $mform->setType('city', PARAM_TEXT);
     if (!empty($CFG->defaultcity)) {
         $mform->setDefault('city', $CFG->defaultcity);
@@ -351,71 +351,71 @@ function useredit_shared_definition(&$mform, $editoroptions, $filemanageroptions
         $mform->addElement('select', 'theme', get_string('preferredtheme'), $choices);
     }
 
-    $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
-    $mform->setType('description_editor', PARAM_RAW);
-    $mform->addHelpButton('description_editor', 'userdescription');
+//    $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
+//    $mform->setType('description_editor', PARAM_RAW);
+//    $mform->addHelpButton('description_editor', 'userdescription');
 
     if (empty($USER->newadminuser)) {
-        $mform->addElement('header', 'moodle_picture', get_string('pictureofuser'));
+        $mform->addElement('hidden', 'moodle_picture', get_string('pictureofuser'));
         $mform->setExpanded('moodle_picture', true);
 
         if (!empty($CFG->enablegravatar)) {
             $mform->addElement('html', html_writer::tag('p', get_string('gravatarenabled')));
         }
 
-        $mform->addElement('static', 'currentpicture', get_string('currentpicture'));
+        $mform->addElement('hidden', 'currentpicture', get_string('currentpicture'));
 
-        $mform->addElement('checkbox', 'deletepicture', get_string('deletepicture'));
+        $mform->addElement('hidden', 'deletepicture', get_string('deletepicture'));
         $mform->setDefault('deletepicture', 0);
 
-        $mform->addElement('filemanager', 'imagefile', get_string('newpicture'), '', $filemanageroptions);
+        $mform->addElement('hidden', 'imagefile', get_string('newpicture'), '', $filemanageroptions);
         $mform->addHelpButton('imagefile', 'newpicture');
 
-        $mform->addElement('text', 'imagealt', get_string('imagealt'), 'maxlength="100" size="30"');
+        $mform->addElement('hidden', 'imagealt', get_string('imagealt'), 'maxlength="100" size="30"');
         $mform->setType('imagealt', PARAM_TEXT);
 
     }
 
     // Display user name fields that are not currenlty enabled here if there are any.
-    $disabledusernamefields = useredit_get_disabled_name_fields($enabledusernamefields);
-    if (count($disabledusernamefields) > 0) {
-        $mform->addElement('header', 'moodle_additional_names', get_string('additionalnames'));
-        foreach ($disabledusernamefields as $allname) {
-            $purpose = user_edit_map_field_purpose($user->id, $allname);
-            $mform->addElement('text', $allname, get_string($allname), 'maxlength="100" size="30"' . $purpose);
-            $mform->setType($allname, PARAM_NOTAGS);
-        }
-    }
-
-    if (core_tag_tag::is_enabled('core', 'user') and empty($USER->newadminuser)) {
-        $mform->addElement('header', 'moodle_interests', get_string('interests'));
-        $mform->addElement('tags', 'interests', get_string('interestslist'),
-            array('itemtype' => 'user', 'component' => 'core'));
-        $mform->addHelpButton('interests', 'interestslist');
-    }
-
-    // Moodle optional fields.
-    $mform->addElement('header', 'moodle_optional', get_string('optional', 'form'));
-
-    $mform->addElement('text', 'idnumber', get_string('idnumber'), 'maxlength="255" size="25"');
-    $mform->setType('idnumber', core_user::get_property_type('idnumber'));
-
-    $mform->addElement('text', 'institution', get_string('institution'), 'maxlength="255" size="25"');
-    $mform->setType('institution', core_user::get_property_type('institution'));
-
-    $mform->addElement('text', 'department', get_string('department'), 'maxlength="255" size="25"');
-    $mform->setType('department', core_user::get_property_type('department'));
-
-    $mform->addElement('text', 'phone1', get_string('phone1'), 'maxlength="20" size="25"');
-    $mform->setType('phone1', core_user::get_property_type('phone1'));
-    $mform->setForceLtr('phone1');
-
-    $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
-    $mform->setType('phone2', core_user::get_property_type('phone2'));
-    $mform->setForceLtr('phone2');
-
-    $mform->addElement('text', 'address', get_string('address'), 'maxlength="255" size="25"');
-    $mform->setType('address', core_user::get_property_type('address'));
+//    $disabledusernamefields = useredit_get_disabled_name_fields($enabledusernamefields);
+//    if (count($disabledusernamefields) > 0) {
+//        $mform->addElement('header', 'moodle_additional_names', get_string('additionalnames'));
+//        foreach ($disabledusernamefields as $allname) {
+//            $purpose = user_edit_map_field_purpose($user->id, $allname);
+//            $mform->addElement('text', $allname, get_string($allname), 'maxlength="100" size="30"' . $purpose);
+//            $mform->setType($allname, PARAM_NOTAGS);
+//        }
+//    }
+//
+//    if (core_tag_tag::is_enabled('core', 'user') and empty($USER->newadminuser)) {
+//        $mform->addElement('header', 'moodle_interests', get_string('interests'));
+//        $mform->addElement('tags', 'interests', get_string('interestslist'),
+//            array('itemtype' => 'user', 'component' => 'core'));
+//        $mform->addHelpButton('interests', 'interestslist');
+//    }
+//
+//    // Moodle optional fields.
+//    $mform->addElement('header', 'moodle_optional', get_string('optional', 'form'));
+//
+//    $mform->addElement('text', 'idnumber', get_string('idnumber'), 'maxlength="255" size="25"');
+//    $mform->setType('idnumber', core_user::get_property_type('idnumber'));
+//
+//    $mform->addElement('text', 'institution', get_string('institution'), 'maxlength="255" size="25"');
+//    $mform->setType('institution', core_user::get_property_type('institution'));
+//
+//    $mform->addElement('text', 'department', get_string('department'), 'maxlength="255" size="25"');
+//    $mform->setType('department', core_user::get_property_type('department'));
+//
+//    $mform->addElement('text', 'phone1', get_string('phone1'), 'maxlength="20" size="25"');
+//    $mform->setType('phone1', core_user::get_property_type('phone1'));
+//    $mform->setForceLtr('phone1');
+//
+//    $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
+//    $mform->setType('phone2', core_user::get_property_type('phone2'));
+//    $mform->setForceLtr('phone2');
+//
+//    $mform->addElement('text', 'address', get_string('address'), 'maxlength="255" size="25"');
+//    $mform->setType('address', core_user::get_property_type('address'));
 }
 
 /**

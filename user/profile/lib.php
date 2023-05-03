@@ -695,7 +695,7 @@ function profile_definition(MoodleQuickForm $mform, int $userid = 0): void {
         }
 
         // Display the header and the fields.
-        $mform->addElement('header', 'category_'.$categoryid, format_string($fields[0]->get_category_name()));
+//        $mform->addElement('header', 'category_'.$categoryid, format_string($fields[0]->get_category_name()));
         foreach ($fieldstodisplay as $formfield) {
             $formfield->edit_field($mform);
         }
