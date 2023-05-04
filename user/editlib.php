@@ -294,12 +294,12 @@ function useredit_shared_definition(&$mform, $editoroptions, $filemanageroptions
     }
 
     $choices = array();
-    $choices['0'] = get_string('emaildisplayno');
-    $choices['1'] = get_string('emaildisplayyes');
-    $choices['2'] = get_string('emaildisplaycourse');
-    $mform->addElement('select', 'maildisplay', get_string('emaildisplay'), $choices);
-    $mform->setDefault('maildisplay', core_user::get_property_default('maildisplay'));
-    $mform->addHelpButton('maildisplay', 'emaildisplay');
+//    $choices['0'] = get_string('emaildisplayno');
+//    $choices['1'] = get_string('emaildisplayyes');
+//    $choices['2'] = get_string('emaildisplaycourse');
+//    $mform->addElement('select', 'maildisplay', get_string('emaildisplay'), $choices);
+//    $mform->setDefault('maildisplay', core_user::get_property_default('maildisplay'));
+//    $mform->addHelpButton('maildisplay', 'emaildisplay');
 
     if (get_config('tool_moodlenet', 'enablemoodlenet')) {
         $mform->addElement('text', 'moodlenetprofile', get_string('moodlenetprofile', 'user'), 'maxlength="255" size="30"');
