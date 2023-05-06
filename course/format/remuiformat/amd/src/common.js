@@ -95,7 +95,7 @@ define(['jquery'], function($) {
         $(SELECTORS.ACTIVITY_TOGGLE).on('click', function() {
 
             if ($(this).hasClass(SELECTORS.SHOW)) {
-                $(this).html('Show Less');
+                $(this).html('عرض أقل');
                 $(this).toggleClass(SELECTORS.SHOW); // Remove show class
             } else {
                 $(this).html('عرض المزيد');
