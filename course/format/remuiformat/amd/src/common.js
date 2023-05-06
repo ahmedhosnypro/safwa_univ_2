@@ -98,7 +98,7 @@ define(['jquery'], function($) {
                 $(this).html('Show Less');
                 $(this).toggleClass(SELECTORS.SHOW); // Remove show class
             } else {
-                $(this).html('Show More');
+                $(this).html('عرض المزيد');
                 $(this).toggleClass(SELECTORS.SHOW); // Add show class
                 $("html, body").animate({
                     scrollTop: $(SELECTORS.FIRST_SECTION + ' .activity:first-child').offset().top - 66
