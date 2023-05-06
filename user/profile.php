@@ -36,11 +36,16 @@ require_once(__DIR__ . '/../config.php');
 require_once($CFG->dirroot . '/my/lib.php');
 require_once($CFG->dirroot . '/user/profile/lib.php');
 require_once($CFG->dirroot . '/user/lib.php');
-require_once($CFG->libdir.'/filelib.php');
+require_once($CFG->libdir . '/filelib.php');
 
-$userid         = optional_param('id', 0, PARAM_INT);
-$edit           = optional_param('edit', null, PARAM_BOOL);    // Turn editing on and off.
-$reset          = optional_param('reset', null, PARAM_BOOL);
+// redirect to home
+if (!is_siteadmin()) {
+    redirect($CFG->wwwroot . '/');
+}
+
+$userid = optional_param('id', 0, PARAM_INT);
+$edit = optional_param('edit', null, PARAM_BOOL);    // Turn editing on and off.
+$reset = optional_param('reset', null, PARAM_BOOL);
 
 $PAGE->set_url('/user/profile.php', array('id' => $userid));
 
@@ -50,8 +55,8 @@ if (!empty($CFG->forceloginforprofiles)) {
         $PAGE->set_context(context_system::instance());
         echo $OUTPUT->header();
         echo $OUTPUT->confirm(get_string('guestcantaccessprofiles', 'error'),
-                              get_login_url(),
-                              $CFG->wwwroot);
+            get_login_url(),
+            $CFG->wwwroot);
         echo $OUTPUT->footer();
         die;
     }
@@ -107,7 +112,7 @@ if (isguestuser()) {     // Guests can never edit their profile.
     $USER->editing = $edit = 0;  // Just in case.
     $PAGE->set_blocks_editing_capability('moodle/my:configsyspages');  // unlikely :).
 } else {
-    if (is_siteadmin()){
+    if (is_siteadmin()) {
         if ($currentuser) {
 
             $PAGE->set_blocks_editing_capability('moodle/user:manageownblocks');
@@ -122,12 +127,12 @@ $strpublicprofile = get_string('publicprofile');
 
 $PAGE->blocks->add_region('content');
 $PAGE->set_subpage($currentpage->id);
-$PAGE->set_title(fullname($user).": $strpublicprofile");
+$PAGE->set_title(fullname($user) . ": $strpublicprofile");
 $PAGE->set_heading(fullname($user));
 
 if (!$currentuser) {
     $PAGE->navigation->extend_for_user($user);
-    if ($node = $PAGE->settingsnav->get('userviewingsettings'.$user->id)) {
+    if ($node = $PAGE->settingsnav->get('userviewingsettings' . $user->id)) {
         $node->forceopen = true;
     }
 } else if ($node = $PAGE->settingsnav->get('dashboard', navigation_node::TYPE_CONTAINER)) {
@@ -217,7 +222,7 @@ if ($user->description && !isset($hiddenfields['description'])) {
         echo get_string('profilenotshown', 'moodle');
     } else {
         $user->description = file_rewrite_pluginfile_urls($user->description, 'pluginfile.php', $usercontext->id, 'user',
-                                                          'profile', null);
+            'profile', null);
         echo format_text($user->description, $user->descriptionformat);
     }
     echo '</div>';
