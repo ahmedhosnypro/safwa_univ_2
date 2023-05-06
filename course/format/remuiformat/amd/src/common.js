@@ -69,8 +69,8 @@ define(['jquery'], function($) {
             $(SELECTORS.FIRST_SECTION).removeClass(SELECTORS.ACTIVITY_TOGGLE_CLASS);
             $(SELECTORS.ACTIVITY_TOGGLE_WRAPPER).hide();
         } else {
-            $(SELECTORS.ACTIVITY_TOGGLE_WRAPPER).show();
-            $(SELECTORS.FIRST_SECTION).addClass(SELECTORS.ACTIVITY_TOGGLE_CLASS);
+            //$(SELECTORS.ACTIVITY_TOGGLE_WRAPPER).show();
+            //$(SELECTORS.FIRST_SECTION).addClass(SELECTORS.ACTIVITY_TOGGLE_CLASS);
         }
     }
     /**
