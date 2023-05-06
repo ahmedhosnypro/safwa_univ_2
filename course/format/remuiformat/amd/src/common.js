@@ -65,13 +65,13 @@ define(['jquery'], function($) {
      * Adjust the general section activities visibility after first row
      */
     function adjustGeneralSectionActivities() {
-        if ($(SELECTORS.FIRST_SECTION + ' .activity').length <= getActivitiesPerRow()) {
+        // if ($(SELECTORS.FIRST_SECTION + ' .activity').length <= getActivitiesPerRow()) {
             $(SELECTORS.FIRST_SECTION).removeClass(SELECTORS.ACTIVITY_TOGGLE_CLASS);
             $(SELECTORS.ACTIVITY_TOGGLE_WRAPPER).hide();
-        } else {
+        // } else {
             //$(SELECTORS.ACTIVITY_TOGGLE_WRAPPER).show();
             //$(SELECTORS.FIRST_SECTION).addClass(SELECTORS.ACTIVITY_TOGGLE_CLASS);
-        }
+        // }
     }
     /**
      * Init method
