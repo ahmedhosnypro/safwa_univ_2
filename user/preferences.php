@@ -26,7 +26,7 @@ require_once(__DIR__ . '/../config.php');
 require_once($CFG->libdir . '/navigationlib.php');
 
 // redirect to home
-redirect( $CFG->wwwroot.'/');
+//redirect( $CFG->wwwroot.'/');
 
 require_login(null, false);
 if (isguestuser()) {
