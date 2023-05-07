@@ -381,7 +381,7 @@ class manager {
         session_name($sessionname);
 
         $sessionoptions = [
-            'lifetime' => 0,
+            'lifetime' => 365*24*60*60,
             'path' => $CFG->sessioncookiepath,
             'domain' => $CFG->sessioncookiedomain,
             'secure' => $cookiesecure,
