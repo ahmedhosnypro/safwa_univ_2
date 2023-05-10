@@ -2625,7 +2625,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 
 /*Flow layout*/
 .format-designer .course-content ul.course-type-flow.designer .section.main .section-header-content {
-    min-height: 400px;
+    /*min-height: 400px;*/
     width: 400px;
     display: inline-block;
     vertical-align: top;
@@ -2640,7 +2640,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     width: 400px;
 }
 .format-designer .designer.course-type-flow .section .content .section.card-layout li.activity .card.card-list {
-    min-height: 400px;
+    /*min-height: 400px;*/
 }
 .format-designer .course-content ul.designer.course-type-flow .section.main .card-body .mod-indent-outer > div {
     display: block;
