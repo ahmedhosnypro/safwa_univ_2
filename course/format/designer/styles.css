@@ -989,7 +989,7 @@ ul li {
 }
 .format-designer .designer .section .content .section.card-layout li.activity {
     width: 48%;
-    min-height: 150px;
+    /*min-height: 150px;*/
     text-align: left;
     border: 0;
     background: none;
@@ -1703,7 +1703,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 
 @media (min-width: 768px) and (max-width: 991px) {
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list {
-        min-height: 250px;
+        /*min-height: 250px;*/
     }
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list .mod-indent-outer {
         /*min-height: 220px;*/
