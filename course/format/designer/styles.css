@@ -1706,7 +1706,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
         min-height: 250px;
     }
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list .mod-indent-outer {
-        min-height: 220px;
+        /*min-height: 220px;*/
     }
     .format-designer.editing .designer .section .content .section.link-layout li.activity .activityinstance .aalink,
     .format-designer.editing .designer .section .content .section.list-layout li.activity .activityinstance .aalink,
