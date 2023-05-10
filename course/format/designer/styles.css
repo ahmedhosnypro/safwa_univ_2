@@ -1744,7 +1744,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
         width: 90%;
     }
     .format-designer .designer .section .content .section.card-layout li.activity .card-list {
-        min-height: 150px;
+        /*min-height: 150px;*/
     }
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list .mod-indent-outer {
         min-height: 120px;
