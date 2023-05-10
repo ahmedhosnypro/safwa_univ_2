@@ -58,17 +58,17 @@ class cmname extends \core_courseformat\output\local\content\cm\cmname {
 
         // Usually classes are loaded in the main cm output. However when the user uses the inplace editor
         // the cmname output does not calculate the css classes.
-        if (!isset($displayoptions['linkclasses']) || !isset($displayoptions['textclasses'])) {
-            $cmclass = $format->get_output_classname('content\\cm');
-            $cmoutput = new $cmclass(
-                $format,
-                $this->section,
-                $mod,
-                $displayoptions
-            );
-            $displayoptions['linkclasses'] = $cmoutput->get_link_classes();
-            $displayoptions['textclasses'] = $cmoutput->get_text_classes();
-        }
+//        if (!isset($displayoptions['linkclasses']) || !isset($displayoptions['textclasses'])) {
+//            $cmclass = $format->get_output_classname('content\\cm');
+//            $cmoutput = new $cmclass(
+//                $format,
+//                $this->section,
+//                $mod,
+//                $displayoptions
+//            );
+//            $displayoptions['linkclasses'] = $cmoutput->get_link_classes();
+//            $displayoptions['textclasses'] = $cmoutput->get_text_classes();
+//        }
 
         $useactivityimage = '';
         if (format_designer_has_pro()) {
