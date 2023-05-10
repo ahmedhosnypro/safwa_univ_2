@@ -1670,10 +1670,10 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 
 @media (min-width: 992px) {
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list {
-        min-height: 220px;
+        /*min-height: 220px;*/
     }
     .format-designer .designer .section .content .section.card-layout li.activity .card.card-list .mod-indent-outer {
-        min-height: 190px;
+        /*min-height: 190px;*/
     }
     .format-designer.editing .designer .section .content .section.link-layout li.activity .activityinstance .aalink.quickeditlink,
     .format-designer.editing .designer .section .content .section.list-layout li.activity .activityinstance .aalink.quickeditlink,
