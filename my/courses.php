@@ -31,6 +31,10 @@ require_once(__DIR__ . '/../config.php');
 require_once($CFG->dirroot . '/my/lib.php');
 require_once($CFG->dirroot . '/course/lib.php');
 
+if (!is_siteadmin()) {
+    redirect($CFG->wwwroot . '/');
+}
+
 redirect_if_major_upgrade_required();
 
 require_login();
